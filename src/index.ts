@@ -6,25 +6,16 @@ import Application from './utility/application';
 const app:Express = express();
 const PORT = 6700;
 
+/**
+ * bootstrap the application ..
+ */
 new Application(app).boot()
 
-app.get('/', (req: Request, res) => {
-    // req.Olumide
-    console.log("I started here now");
-    // new UserController()
+app.get('/', (req: Request, res) => { 
     res.send('Express + TypeScript Server')
 });
-
-
-app.get('/shi', (req, res) => {
-    res.send('Hello World!')
-})
-
 
 app.listen(PORT, () => {
     console.log(`⚡️[server]: Server is running at https://localhost:${PORT}`);
 });
-app.listen(3000, () => {
-    console.log(`Example app listening at http://localhost:3000}`)
-})
 

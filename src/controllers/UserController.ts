@@ -11,15 +11,11 @@ export class UserController extends BaseController{
     
     @url("/1/create","post")
     public createUser(req: Request, res: Response){
-        console.log("Hellow world");
-        
+        res.send("I am in user create file");   
     }
 
     @url("/view")
     public viewUsers(req: Request, res: Response) {
-        console.log("View seen");
-
-        res.send("I am in user view")
-
+        res.send("I am in user view");
     }
 }

@@ -12,7 +12,7 @@ export default class PostController extends BaseController {
 
     @url('/post/create', 'get')
     getRequest(req: Request, res: Response) {
-        console.log("i see i saw ... snake head ")
         res.send("i see i saw ...snake head")
     }
 }
+
