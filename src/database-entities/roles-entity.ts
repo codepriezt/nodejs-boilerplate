@@ -5,7 +5,8 @@ export class Roles {
 
 
     @PrimaryGeneratedColumn()
-    id: number;
+    id: string;
+    generationStrategy: "uuid";
 
     @Column()
     name: string;

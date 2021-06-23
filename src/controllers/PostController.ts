@@ -1,8 +1,10 @@
 import { Request, Response } from 'express';
 import { url } from '../decorators/decos';
 import BaseController from './BaseController';
+import { BaseUrl } from '../decorators/decos';
 
 
+@BaseUrl('posts/')
 export default class PostController extends BaseController {
     constructor(params: string) {
         super()
@@ -10,7 +12,7 @@ export default class PostController extends BaseController {
     }
 
 
-    @url('/post/create', 'get')
+    @url('/create', 'get')
     getRequest(req: Request, res: Response) {
         res.send("i see i saw ...snake head")
     }

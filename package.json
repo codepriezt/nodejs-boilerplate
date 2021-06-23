@@ -7,10 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon src/index.ts",
     "build": "tsc --project ./",
-    "typeorm":"ts-node ./node_modules/.bin/typeorm",
-    "typeorm:migrate-run":"npm run typeorm migration:run",
+    "typeorm": "ts-node ./node_modules/.bin/typeorm",
+    "typeorm:migrate-run": "npm run typeorm migration:run",
     "typeorm:generate": "npm run typeorm migration:generate -- -n"
-
   },
   "repository": {
     "type": "git",
@@ -24,12 +23,14 @@
   },
   "homepage": "https://github.com/codepriezt/education#readme",
   "dependencies": {
+    "@types/uuid": "^8.3.0",
     "express": "^4.17.1",
     "mysql": "^2.18.1",
     "reflect-metadata": "^0.1.13",
-    "typeorm": "^0.2.32"
+    "shallow-equal-object": "^1.1.1",
+    "typeorm": "^0.2.32",
+    "uuid": "^8.3.2"
   },
-  
   "devDependencies": {
     "@types/express": "^4.17.12",
     "@types/node": "^15.6.1",

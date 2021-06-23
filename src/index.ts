@@ -1,4 +1,4 @@
-import express, { Express, Request} from 'express';
+import express, { Express, Request ,Response} from 'express';
 import "reflect-metadata";
 import Application from './utility/application';
 
@@ -11,7 +11,7 @@ const PORT = 6700;
  */
 new Application(app).boot()
 
-app.get('/', (req: Request, res) => { 
+app.get('/', (req: Request, res: Response) => { 
     res.send('Express + TypeScript Server')
 });
 

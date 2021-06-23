@@ -1,16 +1,19 @@
+
 export default class BaseController {
-    // public fool :T[] = [];
-    // constructor(parameters: T) {
-    //     this.fool.push(parameters)
-    // }
-    // public allControllers: T[] = [];
+ 
+//    public success(arg: string){
+//        var handle = {
+//            "code": 200,
+//            "message": arg
+//        }
 
-    // public register(controller: T | T[]){
-    //     if(Array.isArray(controller)){
-    //         this.allControllers = this.allControllers.concat(controller)
-    //         return
-    //     }
-
-    //     this.allControllers.push(controller)
-    // }
+//        return handle;
+//    } 
 }
+
+
+
+// export type response = {
+//     success: string;
+//     error :  string
+// }

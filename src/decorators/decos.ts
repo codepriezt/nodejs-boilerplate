@@ -5,6 +5,7 @@ export const contollersUrls: Map < IClassType, IUrlData[] > = new Map();
 
 export const baseUrlMetadataKey = Symbol("base-url");
 
+//class decorator
 export function BaseUrl(baseUrl: string) {
     
     return (constructor: Function) => {
@@ -12,12 +13,16 @@ export function BaseUrl(baseUrl: string) {
         if (!baseUrl.startsWith("/")) baseUrl = '/' +baseUrl
         if (!baseUrl.endsWith("/") && baseUrl !== "/") baseUrl = baseUrl + '/';
 
+    
         Reflect.defineMetadata(baseUrlMetadataKey, baseUrl, constructor.prototype);
     }
     
 }
 
+
+//method decorator
 export function url(url: string, method: httpMethods = "get") {
+
     
     return (target: any, propertyKey: string, descriptor: PropertyDescriptor) => {
         const data = {
@@ -25,6 +30,7 @@ export function url(url: string, method: httpMethods = "get") {
             method_name: propertyKey,
             http_method: method
         }
+        
         if (contollersUrls.has(target)){
             let methodUrls = contollersUrls.get(target);
             methodUrls?.push(data)

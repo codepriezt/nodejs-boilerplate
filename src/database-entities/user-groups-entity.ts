@@ -12,7 +12,8 @@ export class UserGroups{
     
 
     @PrimaryGeneratedColumn()
-    id: number;
+    id: string;
+    generationStrategy: "uuid"
 
     @ManyToOne(type => Roles  )
     role: Roles;

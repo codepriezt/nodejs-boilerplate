@@ -7,7 +7,8 @@ export class Groups {
 
 
     @PrimaryGeneratedColumn()
-    id: number;
+    id: string;
+    generationStrategy: "uuid"
 
     @Column({
         type:"enum",

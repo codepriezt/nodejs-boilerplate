@@ -5,9 +5,7 @@
  */
 export interface Irepository<T, K > { 
 	read(config?: any): Promise<Array<T>>;
-
-	readById(id: K): T;
-
+	
 	create(entity: T ): Promise<T>;
 
 	update(entity: T ): T;

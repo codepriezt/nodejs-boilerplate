@@ -7,7 +7,8 @@ export class Vendors{
 
 
     @PrimaryGeneratedColumn()
-    id: number;
+    id: string;
+    generationStrategy: "uuid"
 
     @Column({ unique: true })
     email: string;

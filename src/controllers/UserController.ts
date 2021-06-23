@@ -14,7 +14,7 @@ export class UserController extends BaseController{
         res.send("I am in user create file");   
     }
 
-    @url("/view")
+    @url("/view" , "get")
     public viewUsers(req: Request, res: Response) {
         res.send("I am in user view");
     }
