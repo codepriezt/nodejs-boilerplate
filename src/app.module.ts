@@ -1,12 +1,12 @@
 import {UserController} from "./controllers/UserController";
 import BaseController from "./controllers/BaseController";
-import PostController from './controllers/PostController'
+
 
 let controllers: BaseController[] = []
 
 @register([
     UserController,
-    PostController
+    
 
 ])
 export class appModule {
